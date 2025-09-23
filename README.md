@@ -1,3 +1,4 @@
 # qarepo
-
-QA Automation TypeScript
+QA Automation TypeScript  
+Невеликий тестовий репозиторій для практики Git
+Домашніх завдань
