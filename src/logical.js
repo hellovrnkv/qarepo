@@ -1,8 +1,8 @@
 const x = 7;
 const y = "7";
 
-console.log("x === y  ->", x === y); // true (тільки значення)
-console.log("x === y ->", x === y); // false (значення + тип)
+console.log("x == y ->", x == y);
+console.log("x === y ->", x === y); 
 
 console.log("x > 5  ->", x > 5); // true
 console.log("x < 5  ->", x < 5); // false
