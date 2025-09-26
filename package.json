@@ -10,6 +10,9 @@
     "start:sw": "node ./src/switch.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "start:loop": "node ./src/loop.js",
+    "start:arr": "node ./src/arrays.js",
+    "start:obj": "node ./src/objects.js",
     "fmt": "prettier . --write"
   },
   "repository": {
