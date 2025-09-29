@@ -4,14 +4,18 @@
   "description": "QA Automation TypeScript",
   "main": "index.js",
   "scripts": {
-    "start:ar": "node ./src/arifmetics.js",
-    "start:lo": "node ./src/logical.js",
-    "start:dt": "node ./src/decision-tree.js",
-    "start:sw": "node ./src/switch.js",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "fmt": "prettier . --write"
-  },
+  "start:ar": "node ./hw3/arifmetics.js",
+  "start:lo": "node ./hw3/logical.js",
+  "start:dt": "node ./hw3/decision-tree.js",
+  "start:sw": "node ./hw3/switch.js",
+
+  "start:loop": "node ./hw4/loop.js",
+  "start:arr": "node ./hw4/arrays.js",
+  "start:obj": "node ./hw4/objects.js",
+
+  "lint": "eslint .",
+  "lint:fix": "eslint . --fix",
+  "fmt": "prettier . --write"
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hellovrnkv/qarepo.git"
