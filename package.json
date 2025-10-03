@@ -7,23 +7,31 @@
     "lint:fix": "eslint . --fix",
     "fmt": "prettier . --write",
 
-    "start:hw3:ari": "node hw3/src/arifmetics.js",
-    "start:hw3:log": "node hw3/src/logical.js",
-    "start:hw3:dt": "node hw3/src/decision-tree.js",
-    "start:hw3:sw": "node hw3/src/switch.js",
+    "start:hw3:ari": "node ./hw3/src/arifmetics.js",
+    "start:hw3:log": "node ./hw3/src/logical.js",
+    "start:hw3:dt": "node ./hw3/src/decision-tree.js",
+    "start:hw3:sw": "node ./hw3/src/switch.js",
 
-    "start:hw4:loop": "node hw4/src/loop.js",
-    "start:hw4:arr": "node hw4/src/arrays.js",
-    "start:hw4:obj": "node hw4/src/objects.js",
+    "start:hw4:loop": "node ./hw4/src/loop.js",
+    "start:hw4:arr": "node ./hw4/src/arrays.js",
+    "start:hw4:obj": "node ./hw4/src/objects.js",
 
-    "start:hw5:fns": "node hw5/src/functions.js",
-    "start:hw5:afn": "node hw5/src/arrow-functions.js",
-    "start:hw5:getset": "node hw5/src/getter-setters.js",
+    "start:hw5:fns": "node ./hw5/src/functions.js",
+    "start:hw5:afn": "node ./hw5/src/arrow-functions.js",
+    "start:hw5:getset": "node ./hw5/src/getter-setters.js",
 
-     "start:hw6:prom":  "node ./hw6/promises.js",
-    "start:hw6:await": "node ./hw6/async-await.js",
-    "start:hw6:try":   "node ./hw6/try-catch.js"
+    "start:hw6:prom": "node ./hw6/src/promises.js",
+    "start:hw6:await": "node ./hw6/src/async-await.js",
+    "start:hw6:try": "node ./hw6/src/try-catch.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hellovrnkv/qarepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hellovrnkv/qarepo/issues"
+  },
+  "homepage": "https://github.com/hellovrnkv/qarepo#readme",
   "devDependencies": {
     "eslint": "^9.14.0",
     "prettier": "^3.3.3"
