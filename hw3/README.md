@@ -1,0 +1,2 @@
+# qarepo
+QA Automation TypeScript
