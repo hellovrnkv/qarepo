@@ -1,0 +1,18 @@
+{
+  "name": "hw7-ts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc",
+    "start:fn": "ts-node src/functions.ts",
+    "start:afn": "ts-node src/arrow-functions.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.19",
+    "eslint": "^9.37.0",
+    "prettier": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
