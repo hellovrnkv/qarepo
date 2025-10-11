@@ -3,11 +3,9 @@
 type NumArray = number[];
 type StrArray = string[];
 
-// Формальные перегрузки
 export function addArrow(values: NumArray): number;
 export function addArrow(values: StrArray): string;
 
-// Реализация
 export function addArrow(values: (number | string)[]): number | string {
   if (values.length === 0) return 0;
 
@@ -23,7 +21,6 @@ export function addArrow(values: (number | string)[]): number | string {
   throw new Error("Array must contain only numbers OR only strings");
 }
 
-// Дополнительные стрелочные помощники (ещё примеры типизации):
 export const average = (arr: number[]): number => {
   if (arr.length === 0) return 0;
   return arr.reduce((a, b) => a + b, 0) / arr.length;
@@ -34,7 +31,6 @@ export const max = (arr: number[]): number => {
   return Math.max(...arr);
 };
 
-// --- Демонстрация ---
 const nums: number[] = [2, 4, 6, 8];
 const words: string[] = ["Type", "Script", " ", "rocks", "!"];
 

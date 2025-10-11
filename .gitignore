@@ -1,11 +1,13 @@
-# Node
-node_modules
-npm-debug.log
-yarn-error.log
-
-# Mac / VSCode
+cat > .gitignore << 'EOF'
+# Node / tools
+node_modules/
+dist/
+build/
+# OS / editors
 .DS_Store
+Thumbs.db
 .vscode/
-
-# Env files
-.env
+.idea/
+# Logs
+*.log
+EOF
