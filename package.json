@@ -22,7 +22,11 @@
 
     "start:hw6:prom": "node ./hw6/src/promises.js",
     "start:hw6:await": "node ./hw6/src/async-await.js",
-    "start:hw6:try": "node ./hw6/src/try-catch.js"
+    "start:hw6:try": "node ./hw6/src/try-catch.js",
+
+    "start:hw8:dev": "ts-node --project hw8-ts/tsconfig.json hw8-ts/src/index.ts",
+  "build:hw8": "tsc -p hw8-ts/tsconfig.json",
+  "start:hw8": "npm run build:hw8 && node hw8-ts/dist/index.js"
   },
   "repository": {
     "type": "git",
