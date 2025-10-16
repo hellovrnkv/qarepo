@@ -1,37 +1,56 @@
-import { Car, Truck, ElectricCar, GasEngine, ElectricMotor } from './abstractions';
-import type { Movable } from './types';
+// hw9-ts/src/index.ts
 
-function performTrip(vehicle: Movable, km: number): string {
-  vehicle.drive(km);
-  return `Trip done: +${km}km, odometer=${vehicle.odometer()}km`;
+import {
+  Car,
+  Truck,
+  ElectricCar,
+  GasEngine,
+  ElectricMotor,
+  Vehicle,
+  type Describable,
+  type Movable,
+  type TrailerAttachable,
+} from './abstractions';
+
+// утилиты для демонстрации DIP (принимаем интерфейсы)
+function log(obj: Describable): void {
+  console.log(obj.describe());
 }
 
-function main(): void {
-  const gas = new GasEngine(300);       
-  const battery = new ElectricMotor(150);
-
-  const sedan = new Car(gas, 'Family Sedan');
-  const semi  = new Truck(new GasEngine(500), 'Long-Haul Truck');
-  const tesla = new ElectricCar(battery, 'Model Z');
-
-  gas.fill(50);      
-  battery.fill(100);   
-
-  console.log(sedan.describe());
-  console.log(performTrip(sedan, 120));
-  console.log(sedan.describe());
-
-  console.log('---');
-
-  console.log(semi.describe());
-  console.log(performTrip(semi, 300));
-  console.log(semi.describe());
-
-  console.log('---');
-
-  console.log(tesla.describe());
-  console.log(performTrip(tesla, 200));
-  console.log(tesla.describe());
+function go(m: Movable, km: number): void {
+  try {
+    m.drive(km);
+    console.log(`driven ${km}km; odo=${m.odometer()}km; left=${m.rangeLeft()}km`);
+  } catch (e) {
+    console.error('drive failed:', (e as Error).message);
+  }
 }
 
-main();
+// создаём источники энергии
+const gas = new GasEngine(5);        // ~50 км
+const battery = new ElectricMotor(8); // ~48 км
+
+// машины
+const car = new Car(gas, 'MyCar');
+const ev = new ElectricCar(battery, 'MyEV');
+
+const truckPower = new GasEngine(12); // ~120 км
+const truck = new Truck(truckPower, 'MyTruck') as Vehicle & TrailerAttachable;
+truck.attachTrailer(1200);
+
+// логи
+log(gas);
+log(battery);
+log(car);
+log(ev);
+log(truck);
+
+// поехали
+go(car, 20);
+go(ev, 30);
+go(truck, 50);
+
+// ещё раз описания
+log(car);
+log(ev);
+log(truck);
