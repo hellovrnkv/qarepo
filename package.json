@@ -21,7 +21,10 @@
     "start:hw6:try": "node ./hw6/src/try-catch.js",
     "start:hw8:dev": "ts-node --project hw8-ts/tsconfig.json hw8-ts/src/index.ts",
     "build:hw8": "tsc -p hw8-ts/tsconfig.json",
-    "start:hw8": "npm run build:hw8 && node hw8-ts/dist/index.js"
+    "start:hw8": "npm run build:hw8 && node hw8-ts/dist/index.js",
+    "start:hw9:dev": "ts-node --project hw9-ts/tsconfig.json hw9-ts/src/index.ts",
+    "build:hw9": "tsc -p hw9-ts/tsconfig.json",
+    "start:hw9": "npm run build:hw9 && node hw9-ts/dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -32,13 +35,9 @@
   },
   "homepage": "https://github.com/hellovrnkv/qarepo#readme",
   "devDependencies": {
-    "@types/node": "^24.7.2",
     "eslint": "^9.14.0",
     "prettier": "^3.3.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
-  },
-  "dependencies": {
-    "node-fetch": "^3.3.2"
   }
 }
