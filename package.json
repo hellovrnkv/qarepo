@@ -24,7 +24,10 @@
     "start:hw8": "npm run build:hw8 && node hw8-ts/dist/index.js",
     "start:hw9:dev": "ts-node --project hw9-ts/tsconfig.json hw9-ts/src/index.ts",
     "build:hw9": "tsc -p hw9-ts/tsconfig.json",
-    "start:hw9": "npm run build:hw9 && node hw9-ts/dist/index.js"
+    "start:hw9": "npm run build:hw9 && node hw9-ts/dist/index.js",
+    "test:hw10:mocha": "mocha -r ts-node/register -r chai/register-expect hw10/mocha/**/*.spec.ts",
+    "test:hw10:vitest": "vitest run",
+    "test:hw10": "npm run test:hw10:mocha && npm run test:hw10:vitest"
   },
   "repository": {
     "type": "git",
@@ -35,9 +38,16 @@
   },
   "homepage": "https://github.com/hellovrnkv/qarepo#readme",
   "devDependencies": {
+    "@types/chai": "^5.2.2",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^24.8.1",
+    "c8": "^10.1.3",
+    "chai": "^6.2.0",
     "eslint": "^9.14.0",
+    "mocha": "^11.7.4",
     "prettier": "^3.3.3",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
   }
 }
