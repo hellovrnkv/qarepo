@@ -1,0 +1,6 @@
+{
+  "extension": ["ts"],
+  "spec": ["hw11-ts/mocha/**/*.spec.ts"],
+  "require": ["tsx/register"],
+  "color": true
+}

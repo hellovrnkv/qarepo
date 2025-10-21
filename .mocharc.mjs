@@ -8,6 +8,7 @@ export default {
 
   // где лежат спеки mocha для HW10
   spec: ['hw10-ts/mocha/**/*.spec.ts'],
+  spec: ['hw11-ts/mocha/**/*.spec.ts'],
 
   // чтобы mocha правильно «видела» TS-импорты без пересборки
   'watch-files': ['hw9-ts/src/**/*.ts', 'hw10-ts/mocha/**/*.spec.ts'],

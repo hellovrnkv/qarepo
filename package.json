@@ -1,14 +1,11 @@
 {
-  "type": "module",
+  "name": "qarepo",
+  "private": true,
+  "workspaces": [
+    "hw11-ts"
+  ],
   "scripts": {
-    "test:hw10:vitest": "vitest run",
-    "test:hw10:mocha": "mocha --config .mocharc.mjs"
-  },
-  "devDependencies": {
-    "chai": "^4.4.1",
-    "mocha": "^10.4.0",
-    "tsx": "^4.19.0",
-    "vitest": "^3.2.4",
-    "@types/chai": "^4.3.11"
+    "test": "npm -ws run test",
+    "test:ui": "npm -ws run test:ui"
   }
 }

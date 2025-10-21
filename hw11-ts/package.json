@@ -1,0 +1,13 @@
+{
+  "name": "hw11",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "vitest --run",
+    "test:ui": "vitest"
+  },
+  "devDependencies": {
+    "vitest": "^2.0.0",
+    "@vitest/coverage-v8": "^2.0.0"
+  }
+}
