@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+
+    // чтобы можно было импортировать с .ts в пути (ESM этого требует)
+    "allowImportingTsExtensions": true,
+
+    // для редактора, сборки не делаем
+    "noEmit": true,
+
+    // типы для тестов (vitest/jest/chai подсветка)
+    "types": ["vitest", "mocha", "chai"],
+    "lib": ["ES2020", "DOM"]
+  },
+  "include": [
+    "hw9-ts/**/*.ts",
+    "hw10-ts/**/*.ts",
+    "**/*.ts"
+  ]
+}
