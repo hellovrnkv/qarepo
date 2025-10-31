@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "Node16",                 // ✅ согласовано
+    "moduleResolution": "Node16",       // ✅ то же самое
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "types": ["node", "vitest/globals"]
+  },
+  "include": ["src"]
+}
