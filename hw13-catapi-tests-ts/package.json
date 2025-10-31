@@ -1,0 +1,19 @@
+{
+  "name": "hw13-catapi-tests-ts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run --reporter=verbose",
+    "test:ui": "vitest"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.3"
+  }
+}
