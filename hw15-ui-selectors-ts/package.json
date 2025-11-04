@@ -1,0 +1,13 @@
+{
+  "name": "hw15-ui-selectors-ts",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "codegen": "playwright codegen https://demo.playwright.dev/todomvc"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.47.2",
+    "typescript": "^5.4.5"
+  }
+}
