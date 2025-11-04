@@ -1,0 +1,167 @@
+openapi: 3.0.3
+info:
+  title: TheCatAPI — Integration Tests Spec (HW13)
+  version: 1.0.0
+servers:
+  - url: https://api.thecatapi.com/v1
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: x-api-key
+  schemas:
+    Image:
+      type: object
+      properties:
+        id: { type: string }
+        url: { type: string }
+      required: [id]
+    VoteCreateRequest:
+      type: object
+      properties:
+        image_id: { type: string }
+        value: { type: integer, enum: [0,1] }
+        sub_id: { type: string }
+      required: [image_id, value]
+    Vote:
+      type: object
+      properties:
+        id: { type: integer }
+        image_id: { type: string }
+        value: { type: integer }
+      required: [id, image_id, value]
+    FavouriteCreateRequest:
+      type: object
+      properties:
+        image_id: { type: string }
+        sub_id: { type: string }
+      required: [image_id]
+    Favourite:
+      type: object
+      properties:
+        id: { type: integer }
+        image_id: { type: string }
+      required: [id, image_id]
+
+security:
+  - ApiKeyAuth: []
+
+paths:
+  /images/search:
+    get:
+      summary: Get random images
+      parameters:
+        - in: query
+          name: limit
+          schema: { type: integer, default: 1 }
+        - in: query
+          name: size
+          schema: { type: string, enum: [small,med,full], default: small }
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Image'
+
+  /votes:
+    post:
+      summary: Create a vote
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VoteCreateRequest'
+      responses:
+        '200':
+          description: created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id: { type: integer }
+                  message: { type: string }
+    get:
+      summary: List votes by sub_id
+      parameters:
+        - in: query
+          name: sub_id
+          schema: { type: string }
+        - in: query
+          name: limit
+          schema: { type: integer }
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Vote'
+
+  /votes/{id}:
+    delete:
+      summary: Delete vote by id
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: deleted }
+
+  /favourites:
+    post:
+      summary: Create favourite
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FavouriteCreateRequest'
+      responses:
+        '200':
+          description: created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id: { type: integer }
+                  message: { type: string }
+    get:
+      summary: List favourites by sub_id
+      parameters:
+        - in: query
+          name: sub_id
+          schema: { type: string }
+        - in: query
+          name: limit
+          schema: { type: integer }
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Favourite'
+
+  /favourites/{id}:
+    delete:
+      summary: Delete favourite by id
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: deleted }
