@@ -1,39 +1,9 @@
 {
-  "name": "qarepo",
-  "version": "1.0.0",
-  "private": true,
+  "type": "module",
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "fmt": "prettier . --write",
-    "start:hw3:ari": "node ./hw3/src/arifmetics.js",
-    "start:hw3:log": "node ./hw3/src/logical.js",
-    "start:hw3:dt": "node ./hw3/src/decision-tree.js",
-    "start:hw3:sw": "node ./hw3/src/switch.js",
-    "start:hw4:loop": "node ./hw4/src/loop.js",
-    "start:hw4:arr": "node ./hw4/src/arrays.js",
-    "start:hw4:obj": "node ./hw4/src/objects.js",
-    "start:hw5:fns": "node ./hw5/src/functions.js",
-    "start:hw5:afn": "node ./hw5/src/arrow-functions.js",
-    "start:hw5:getset": "node ./hw5/src/getter-setters.js",
-    "start:hw6:prom": "node ./hw6/src/promises.js",
-    "start:hw6:await": "node ./hw6/src/async-await.js",
-    "start:hw6:try": "node ./hw6/src/try-catch.js",
-    "start:hw8:dev": "ts-node --project hw8-ts/tsconfig.json hw8-ts/src/index.ts",
-    "build:hw8": "tsc -p hw8-ts/tsconfig.json",
-    "start:hw8": "npm run build:hw8 && node hw8-ts/dist/index.js",
-    "start:hw9:dev": "ts-node --project hw9-ts/tsconfig.json hw9-ts/src/index.ts",
-    "build:hw9": "tsc -p hw9-ts/tsconfig.json",
-    "start:hw9": "npm run build:hw9 && node hw9-ts/dist/index.js"
+    "test:hw10:vitest": "vitest run",
+    "test:hw10:mocha": "mocha --config .mocharc.mjs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hellovrnkv/qarepo.git"
-  },
-  "bugs": {
-    "url": "https://github.com/hellovrnkv/qarepo/issues"
-  },
-  "homepage": "https://github.com/hellovrnkv/qarepo#readme",
   "devDependencies": {
     "@playwright/test": "^1.56.1",
     "@types/node": "^24.10.1",
@@ -41,5 +11,10 @@
     "prettier": "^3.3.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
+    "chai": "^4.4.1",
+    "mocha": "^10.4.0",
+    "tsx": "^4.19.0",
+    "vitest": "^3.2.4",
+    "@types/chai": "^4.3.11"
   }
 }
