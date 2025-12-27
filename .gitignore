@@ -12,3 +12,13 @@ yarn-error.log
 
 node_modules/
 hw8-ts/dist/
+official_joke_api/
+official_joke_api/
+.DS_Store
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
